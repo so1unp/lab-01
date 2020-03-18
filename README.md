@@ -14,7 +14,7 @@ $ sumatoria 1 2 3 5 8
 ```
 
 ### Ejercicio 2
-Repasar el primer capítulo de libro "El Lenguaje de Programación C" (W. Kernighan y D. Ritchie, Prentice Hall), y realizar los siguientes ejercicios del Capítulo 1: 
+Repasar el primer capítulo de libro "El Lenguaje de Programación C" (W. Kernighan y D. Ritchie, Prentice Hall) y realizar los siguientes ejercicios del Capítulo 1: 
 - 1.5
 - 1.8
 - 1.13
