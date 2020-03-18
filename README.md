@@ -6,6 +6,28 @@ Para los Laboratorios usaremos [Git](https://git-scm.com/), un sistema de contro
 
 [Aquí](http://rogerdudler.github.io/git-guide/index.es.html) pueden leer una guía sencilla para aprender los comandos básicos de Git.
 
+### Compilación
+Para hacer más sencilla la compilación de los programas, vamos a utilizar el comando `make`. Podemos ejecutarlo indicando como parámetro el nombre del archivo fuente (sin la extensión). Si se ejecuta sin parámetros, compila _todos_ los programas del laboratorio.
+
+Por ejemplo, para compilar el ejercicio 1:
+```
+$ make ej1
+gcc -o ./bin/ej1 ej1.c -Wall -Werror -g
+$
+```
+El ejecutable se crea dentro del subdirectorio `bin`. Lo podemos comprobar haciendo un listado del contenido del directorio (que contiene ya un archivo de nombre README.md):
+```
+$ ls bin
+ej1 README.md
+$
+```
+Para ejecutar nuestro programa recien compilado:
+```
+$ bin/ej1
+$
+```
+Como todavía no modificamos el programa, el mismo no realiza ninguna acción.
+
 ### Ejercicio 1
 Modificar el programa `ej1.c` para que retorne la suma de un número arbitrario de enteros, provistos desde la línea de comandos. Por ejemplo:
 ```
