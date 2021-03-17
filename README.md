@@ -1,13 +1,13 @@
 # Laboratorio 1 - El Lenguaje de Programación C
 
-El objetivo de este laboratorio es familiarizarse con las herramientas de desarrollo y repasar el lenguaje C.
+:calendar: Fecha de entrega: 25/03
 
-Para los Laboratorios usaremos [Git](https://git-scm.com/), un sistema de control de versiones, para bajar y subir código a un repositorio en GitHub.
+El objetivo de este laboratorio es familiarizarse con las herramientas de desarrollo y el lenguaje C.
 
-[Aquí](http://rogerdudler.github.io/git-guide/index.es.html) pueden leer una guía sencilla para aprender los comandos básicos de Git.
+Para los Laboratorios usaremos [Git](https://git-scm.com/), un sistema de control de versiones, para bajar y subir código a un repositorio en GitHub. [Aquí](http://rogerdudler.github.io/git-guide/index.es.html) pueden leer una guía sencilla para aprender los comandos básicos de Git.
 
 ### Compilación
-Para hacer más sencilla la compilación de los programas, vamos a utilizar el comando `make`. Podemos ejecutarlo indicando como parámetro el nombre del archivo fuente (sin la extensión). Si se ejecuta sin parámetros, compila _todos_ los programas del laboratorio.
+Para compilar los programas, vamos a utilizar el comando `make`. Podemos ejecutarlo indicando como parámetro el nombre del archivo fuente (sin la extensión). Si se ejecuta sin parámetros, compila _todos_ los programas del laboratorio.
 
 Por ejemplo, para compilar el ejercicio 1:
 ```
