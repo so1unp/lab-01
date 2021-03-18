@@ -1,6 +1,6 @@
 # Laboratorio 1 - El Lenguaje de Programación C
 
-:calendar: Fecha de entrega: 25/03
+:calendar: Fecha de entrega: 31/03
 
 El objetivo de este laboratorio es familiarizarse con las herramientas de desarrollo y el lenguaje C.
 
@@ -18,7 +18,7 @@ $
 El ejecutable se crea dentro del subdirectorio `bin`. Lo podemos comprobar haciendo un listado del contenido del directorio (que contiene ya un archivo de nombre README.md):
 ```
 $ ls bin
-ej1 README.md
+ej1 
 $
 ```
 Para ejecutar nuestro programa recien compilado:
