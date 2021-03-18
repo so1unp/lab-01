@@ -15,7 +15,7 @@ $ make ej1
 gcc -o ./bin/ej1 ej1.c -Wall -Werror -g
 $
 ```
-El ejecutable se crea dentro del subdirectorio `bin`. Lo podemos comprobar haciendo un listado del contenido del directorio (que contiene ya un archivo de nombre README.md):
+El ejecutable se crea dentro del subdirectorio `bin`. Lo podemos comprobar haciendo un listado del contenido del directorio:
 ```
 $ ls bin
 ej1 
