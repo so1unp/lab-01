@@ -1,7 +1,5 @@
 # Laboratorio 1 - El Lenguaje de Programación C
 
-:calendar: Fecha de entrega: 31/03
-
 El objetivo de este laboratorio es familiarizarse con las herramientas de desarrollo y el lenguaje C.
 
 Para los Laboratorios usaremos [Git](https://git-scm.com/), un sistema de control de versiones, y GitHub para administrar los repositorios remotos. [Aquí](http://rogerdudler.github.io/git-guide/index.es.html) pueden leer una guía sencilla para aprender los comandos básicos de Git.
