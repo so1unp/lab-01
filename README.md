@@ -95,7 +95,7 @@ $
 ``` 
 En el ejemplo se ejecuta el programa sin parámetros y queda a la espera de datos desde la entrada estándar. Se ingresan las frases `Esto es un texto` y `Esto es otro texto`, cada una seguida de un *Enter*. Luego se presiona `^D` (Ctrl+D), combinación que envía un `EOF`.
 
-El histograma indica que en el texto analizado se encontraron dos palabras de dos letras (*es* y *un*), una palabra de cuatro letras y otra de cinco.  
+El histograma indica que en el texto analizado se encontraron tres palabras con dos letras (*es* dos veces y *un*), tres palabras de cuatro letras y dos de cinco.  
 
 ---
 
