@@ -56,5 +56,5 @@ dkms.conf
 *.swp
 
 # Binarios de los ejercicios
-bin/ej*
-bin/sh
+!bin/.keep
+bin/**

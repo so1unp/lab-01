@@ -1,10 +1,12 @@
 CC=gcc
 BIN=./bin
-CFLAGS=-g -std=c99 -pedantic -Wall -Wextra -Werror -Wshadow -Wconversion -Wunreachable-code
+CFLAGS=-g -std=c99 -pedantic -Wall -Wextra -Wshadow -Wconversion -Wunreachable-code
+LIBS=-lpthread
 
-PROG=ej1 ej2-1.5 ej2-1.8 ej2-1.13 ej2-1.15 ej2-1.19 ej3-5.3 ej3-6.4
+SRC = $(wildcard *.c)
+PROGS=$(SRC:.c=)
 
-LIST=$(addprefix $(BIN)/, $(PROG))
+LIST=$(addprefix $(BIN)/, $(PROGS))
 
 .PHONY: all
 all: $(LIST)

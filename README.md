@@ -2,51 +2,100 @@
 
 El objetivo de este laboratorio es familiarizarse con las herramientas de desarrollo y el lenguaje C.
 
-Para los Laboratorios usaremos [Git](https://git-scm.com/), un sistema de control de versiones, y GitHub para administrar los repositorios remotos. [Aquí](http://rogerdudler.github.io/git-guide/index.es.html) pueden leer una guía sencilla para aprender los comandos básicos de Git.
+Para el desarrollo de los laboratorios no se utilizará un IDE. Se empleará un editor de texto y el compilador desde la línea de comandos. Como editor de texto utilizaremos VSCode, pero pueden utilizar cualquier editor con el que se sientan comodos.
+
+Usaremos [Git](https://git-scm.com/) como sistema de control de versiones y GitHub para administrar los repositorios remotos. [Aquí](http://rogerdudler.github.io/git-guide/index.es.html) pueden leer una guía sencilla para aprender los comandos básicos de Git.
 
 ### Compilación
-Para compilar los programas, vamos a utilizar el comando `make`. Podemos ejecutarlo indicando como parámetro el nombre del archivo fuente (sin la extensión). Si se ejecuta sin parámetros, compila _todos_ los programas del laboratorio.
+Para compilar los programas vamos a utilizar el comando `make`. Si se ejecuta sin parámetros, compila _todos_ los programas del laboratorio. Si se indica el nombre de un archivo _sin la extensión_ compila sólo dicho programa.
 
 Por ejemplo, para compilar el ejercicio 1:
 ```
-$ make ej1
-gcc -o ./bin/ej1 ej1.c -Wall -Werror -g
+$ make sum
+gcc -g -std=c99 -pedantic -Wall -Wextra -Wshadow -Wconversion -Wunreachable-code -o ./bin/sum sum.c
+sum.c: In function ‘main’:
+sum.c:4:14: warning: unused parameter ‘argc’ [-Wunused-parameter]
+    4 | int main(int argc, char *argv[])
+      |          ~~~~^~~~
+sum.c:4:26: warning: unused parameter ‘argv’ [-Wunused-parameter]
+    4 | int main(int argc, char *argv[])
+      |                    ~~~~~~^~~~~~
 $
 ```
-El ejecutable se crea dentro del subdirectorio `bin`. Lo podemos comprobar haciendo un listado del contenido del directorio:
+
+El compilador genera una serie de _warnings_ (advertencias). En este caso, nos está indicando que los parámetros `argc` y `argv` de la función `main()` no estan siendo utilizados (`unused parameter`). El objetivo es que los programas pedidos en cada ejercicio no sólo cumplan con el enunciado sino que _además_ se compilen *sin advertencias*.
+
+El ejecutable se crea dentro del subdirectorio `bin` del laboratorio. Lo podemos comprobar haciendo un listado del contenido de dicho directorio:
 ```
 $ ls bin
-ej1 
+sum 
 $
 ```
-Para ejecutar nuestro programa recien compilado:
+Para ejecutar el programa recien compilado:
 ```
-$ bin/ej1
+$ bin/sum
 $
 ```
-Como todavía no modificamos el programa, el mismo no realiza ninguna acción.
+Como todavía no se realizó una modifación al programa, no realiza ninguna acción.
 
-### Ejercicio 1
-Modificar el programa `ej1.c` para que retorne la suma de un número arbitrario de enteros, provistos desde la línea de comandos. Por ejemplo:
+## Ejercicio 0
+El programa `democ.c` es una demostración de las funcionalidades básicas del lenguaje C: declaración de variables, estructuras, ciclos, control, punteros e imprimir mensajes por la salida estándar haciendo uso de funciones de la biblioteca. Leer el código, compilar el programa y ejecutarlo.
+
+## Ejercicio 1
+Completar el programa `hola.c` para que imprima por la salida estandar el mensaje indicado como parámetro. Utilizar la función [`printf()`](https://www.man7.org/linux/man-pages/man3/printf.3.html) para imprimir el mensaje. Un ejemplo de ejecución es:
 ```
-$ sumatoria 1 2 3 5 8
-19
+$ bin/hola "hola mundo"
+hola mundo
+$
 ```
 
-### Ejercicio 2
-Repasar el primer capítulo de libro "El Lenguaje de Programación C" (W. Kernighan y D. Ritchie, Prentice Hall) y realizar los siguientes ejercicios del Capítulo 1: 
-- 1.8
-- 1.13
-- 1.19
+Para obtener el texto a imprimir se debe utilizar el argumento `argv[]` de la función `main()`. No olvidar verificar que exista el argumento inspeccionando `argc`.
 
-### Ejercicio 3
-Repasar los siguientes capitulos del libro "El Lenguaje de Programación C":
-- 5.1 (Apuntadores y direcciones) a 5.5 (Apuntadores a caracteres y funciones).
-- 6.1 (Conceptos básicos sobre estructuras) a 6.4 (Apuntadores a estructuras).
+## Ejercicio 2
+Modificar el programa `sum.c` para que retorne la suma de un número arbitrario de enteros indicados desde la línea de comandos. Por ejemplo:
+```
+$ bin/sum 1 2 3
+6
+$
+```
 
-Realizar los siguientes ejercicios de los Capítulos 5 y 6:
-- 5.3
-- 6.4
+## Ejercicio 3
+Completar el programa `palabras.c` para que imprima las palabras que recibe desde la _entrada estándar_. Por ejemplo:
+```
+$ bin/palabras
+Esto es un texto ↵
+esto
+es
+un
+texto
+Hola mundo ↵
+Hola
+mundo
+^C
+$
+```
+En el ejemplo, luego de ingresar una frase y presionar Enter (`↵`), el programa imprime cada palabra, una por línea. El programa finalice al presionar `^C` (Ctrl+C).
+
+Utilizar la función `getc()` para obtener un carácter desde la _entrada estándar_.
+
+## Ejercicio 4
+Completar el programa `histograma.c` para que imprima un histograma de las longitudes de las palabras de su entrada. La versión más sencilla del histograma es con las barras horizontales. La orientación vertical es más desafiante. No es necesario leer el texto a analizar desde un archivo, si no desde la *entrada estándar*. Un ejemplo de ejecución sería:
+```
+$ bin/histograma
+Esto es un texto ↵
+Esto es otro texto ↵
+^D
+1
+2 ***
+3
+4 ***
+5 **
+$
+
+``` 
+En el ejemplo se ejecuta el programa sin parámetros y queda a la espera de datos desde la entrada estándar. Se ingresan las frases `Esto es un texto` y `Esto es otro texto`, cada una seguida de un *Enter*. Luego se presiona `^D` (Ctrl+D), combinación que envía un `EOF`.
+
+El histograma indica que en el texto analizado se encontraron dos palabras de dos letras (*es* y *un*), una palabra de cuatro letras y otra de cinco.  
 
 ---
 
