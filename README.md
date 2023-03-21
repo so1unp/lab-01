@@ -1,10 +1,6 @@
 # Laboratorio 1 - El Lenguaje de Programación C
 
-El objetivo de este laboratorio es familiarizarse con las herramientas de desarrollo y el lenguaje C.
-
-Para el desarrollo de los laboratorios no se utilizará un IDE. Se empleará un editor de texto y el compilador desde la línea de comandos. Como editor de texto utilizaremos VSCode, pero pueden utilizar cualquier editor con el que se sientan comodos.
-
-Usaremos [Git](https://git-scm.com/) como sistema de control de versiones y GitHub para administrar los repositorios remotos. [Aquí](http://rogerdudler.github.io/git-guide/index.es.html) pueden leer una guía sencilla para aprender los comandos básicos de Git.
+El objetivo de este laboratorio es familiarizarse con el lenguaje C y las herramientas de desarrollo. Como editor de texto se utilizará VSCode y se empleará el compilador desde la línea de comandos.  Para el control de versiones se empleará [Git](https://git-scm.com/) y GitHub para administrar los repositorios remotos. [Aquí](http://rogerdudler.github.io/git-guide/index.es.html) pueden leer una guía sencilla para aprender los comandos básicos de Git.
 
 ### Compilación
 Para compilar los programas vamos a utilizar el comando `make`. Si se ejecuta sin parámetros, compila _todos_ los programas del laboratorio. Si se indica el nombre de un archivo _sin la extensión_ compila sólo dicho programa.
@@ -12,7 +8,7 @@ Para compilar los programas vamos a utilizar el comando `make`. Si se ejecuta si
 Por ejemplo, para compilar el ejercicio 1:
 ```
 $ make sum
-gcc -g -std=c99 -pedantic -Wall -Wextra -Wshadow -Wconversion -Wunreachable-code -o ./bin/sum sum.c
+gcc -g -Wall -Wextra -Wshadow -Wconversion -Wunreachable-code -o ./bin/sum sum.c
 sum.c: In function ‘main’:
 sum.c:4:14: warning: unused parameter ‘argc’ [-Wunused-parameter]
     4 | int main(int argc, char *argv[])
