@@ -70,9 +70,9 @@ mundo
 ^C
 $
 ```
-En el ejemplo, luego de ingresar una frase y presionar Enter (`↵`), el programa imprime cada palabra, una por línea. El programa finalice al presionar `^C` (Ctrl+C).
+En el ejemplo, luego de ingresar una frase y presionar Enter (`↵`), el programa imprime cada palabra, una por línea. El programa finaliza al presionar `^C` (Ctrl+C).
 
-Utilizar la función `getc()` para obtener un carácter desde la _entrada estándar_.
+Utilizar la función [`getchar()`](https://www.man7.org/linux/man-pages/man3/getchar.3.html) para obtener un carácter desde la _entrada estándar_.
 
 ## Ejercicio 4
 Completar el programa `histograma.c` para que imprima un histograma de las longitudes de las palabras de su entrada. La versión más sencilla del histograma es con las barras horizontales. La orientación vertical es más desafiante. No es necesario leer el texto a analizar desde un archivo, si no desde la *entrada estándar*. Un ejemplo de ejecución sería:
