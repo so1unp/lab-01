@@ -21,5 +21,5 @@ $(BIN)/%: %.c
 clean:
 	rm -f $(LIST)
 
-dist:
-	git archive --format zip --output ${USER}-lab01.zip master
+zip:
+	git archive --format zip --output ${USER}-lab01.zip HEAD
