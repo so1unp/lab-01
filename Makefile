@@ -20,3 +20,6 @@ $(BIN)/%: %.c
 .PHONY: clean
 clean:
 	rm -f $(LIST)
+
+dist:
+	git archive --format zip --output ${USER}-lab01.zip master
