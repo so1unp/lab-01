@@ -1,4 +1,4 @@
-# DEPRECADO
+# OBSOLETO
 
 El laboratorio 1 ahora forma parte del repositoro [Laboratorios](https://github.com/so1unp/laboratorios/).
 
