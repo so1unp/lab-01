@@ -1,3 +1,7 @@
+# DEPRECADO
+
+El laboratorio 1 ahora forma parte del repositoro [Laboratorios](https://github.com/so1unp/laboratorios/).
+
 # Laboratorio 1 - El Lenguaje de Programación C
 
 El objetivo de este laboratorio es familiarizarse con el lenguaje C y las herramientas de desarrollo. Como editor de texto se utilizará VSCode y se empleará el compilador desde la línea de comandos.  Para el control de versiones se empleará [Git](https://git-scm.com/) y GitHub para administrar los repositorios remotos. [Aquí](http://rogerdudler.github.io/git-guide/index.es.html) pueden leer una guía sencilla para aprender los comandos básicos de Git.
